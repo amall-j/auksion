@@ -275,7 +275,7 @@ export default function ScrollCards() {
             <div className="keen-slider__slide   h-20   text-xl gap-3 grid grid-cols-11">
               {filteredCategry.slice(0, 11).map((c, index) => (
                 <div
-                  className="group border-b-2 border-blue w-[85%]  flex items-center justify-center flex-col"
+                  className="group border-b-2 border-blue w-[85%] text-center  flex items-center justify-center flex-col"
                   key={index}
                 >
                   <div className="w-">{c.icon}</div>
@@ -283,15 +283,16 @@ export default function ScrollCards() {
                 </div>
               ))}
             </div>
-            <div className="keen-slider__slide  bg-green-500 h-15 grid grid-cols-8 gap-3 text-white text-xl">
-              <div className="bg-blue">1</div>
-              <div className="bg-blue">1</div>
-              <div className="bg-blue">1</div>
-              <div className="bg-blue">1</div>
-              <div className="bg-blue">1</div>
-              <div className="bg-blue">1</div>
-              <div className="bg-blue">1</div>
-              <div className="bg-blue">1</div>
+            <div className="keen-slider__slide   h-20   text-xl gap-3 grid grid-cols-11">
+              {filteredCategry.slice(0, 11).map((c, index) => (
+                <div
+                  className="group border-b-2 border-blue w-[85%]  text-center flex items-center justify-center flex-col"
+                  key={index}
+                >
+                  <div className="w-">{c.icon}</div>
+                  <h1>{c.text}</h1>{" "}
+                </div>
+              ))}
             </div>
           </div>
 
@@ -299,11 +300,11 @@ export default function ScrollCards() {
             onClick={() => {
               instanceRef.current?.prev(), setSlider(false);
             }}
-            className={`absolute left-0 top-1/2 -translate-y-1/2 h-full w-[2%] bg-gradient-to-r from-white  to-transparent duration-100 ${
+            className={`absolute left-0 top-1/2 -translate-y-1/2 h-full w-[4%] bg-gradient-to-r from-white  to-transparent duration-100 ${
               slider ? " opacity-100" : "opacity-0"
             }`}
           >
-            <h1 className="text-blue ">
+            <h1 className="text-blue translate-x-4 ">
               <BsChevronLeft size={20} />
             </h1>
           </button>
@@ -316,7 +317,7 @@ export default function ScrollCards() {
               slider ? " opacity-0" : "opacity-100"
             }`}
           >
-            <h1 className="text-blue ">
+            <h1 className="text-blue translate-x-4 ">
               <BsChevronRight size={20} />
             </h1>
           </button>
